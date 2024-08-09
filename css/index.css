@@ -1,0 +1,85 @@
+body {
+
+    background-color: #189dfc3e; /* background color changed */
+    color: #450b78;/* default font color changed*/
+    font-family: 'Bebas Neue', sans-serif;/*google fonts*/
+    margin: 10px; /*margin added*/
+    padding: 10px;/*padding added*/
+    text-align: center;
+}
+section {
+    padding: 20px;/*spacinging added*/
+    margin: 20px auto;/*spacing added*/
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#Connect{
+    text-align: center;/*1 section align*/
+}
+h1, h2 {
+    color: #400153f1; /*colour changed headings*/
+    font-weight: bold; /*weight changed headings*/
+}
+h1 {
+    font-size: 2.5em;/*size changed headings*/
+    margin-top: 20px;
+    color: #611fa8; /* Transform the style of your Name at the top of the page */
+    text-transform: uppercase;
+    }
+h2 {
+    font-size: 2em; /*size changed headings*/
+    margin: 20px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 180px;
+    margin-top: 20px;
+    margin-right: 780px;
+    border: 2px solid #2cbdedf1;
+    } /* picture added*/
+
+#Experience ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px
+     }
+#Experience li{
+    display: block; 
+    background-color: #f0f0f0;
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 15px; 
+    margin-bottom: 10px;
+    text-align: center; 
+    }
+#Experience li:hover {
+    background-color: #e0e0e0;}
+
+ /* Transform the style of the "Connect" links */
+    #Connect a {
+        color: #007bff;
+        padding: 10px 15px; 
+        border-radius: 5px; 
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    }
+    #Connect a:hover {
+        text-decoration: underline;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0; 
+        }
+    
+ footer {
+    padding: 10px;
+    background-color: #400153f1;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+}
+
