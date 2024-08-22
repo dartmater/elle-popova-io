@@ -1,163 +1,267 @@
-*{
-    margin: 0; /*from youtube*/
-    padding:0;
+/* Smartphones (portrait and landscape) */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.5em; /* h1 font size change for Smartphones */
+    color: #25373d; /* h1 text color change for Smartphones */
+    font-style: italic; /*change font style of my name element */
+  }
+  header {
+    margin-top: 3px; /* header margin change for Smartphones*/
+    padding: 3px 6px; /* header padding change for Smartphones*/
+    background-color: #cbe655; /* header background color change for Smartphones*/
+  }
+
+  #Experience li {
+    background-color: #dac5ef; /* background color change for Smartphones*/
+    display: grid; /* flexbox display change for Smartphones*/
+    grid-template-columns: 1fr 1fr; /*apperently it highlights columns*/
+    gap: 10px;
+    padding: 5px; /* padding change for Smartphones*/
+    margin-bottom: 4px; /* margin change for Smartphones*/
+  }
 }
 
+/* Tablets (portrait and landscape) */
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  h1 {
+    font-size: 1.5em; /* h1 font size change for Tablets */
+    color: #714570; /* h1 text color change for Tablets */
+    font-style: oblique; /*change font style of my name element */
+  }
+  header {
+    margin-top: 4px; /* header margin change for Tablets*/
+    padding: 4px 8px; /* header padding change for Tablets*/
+    background-color: #f18f87; /* header background color change for Tablets*/
+  }
+
+  #Experience li {
+    background-color: #c5efc9; /* background color change for Tablets*/
+    display: grid; /* flexbox display change for Tablets*/
+    grid-template-columns: 1fr 1fr; /*apperently it highlights columns*/
+    gap: 12px;
+    padding: 6px; /* padding change for Tablets*/
+    margin-bottom: 5px; /* margin change for Tablets*/
+  }
+}
+
+* {
+  margin: 0; /*from youtube*/
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    background-color: #189dfc3e; /* background color changed */
-    color: #450b78; /* default font color changed */
-    font-family: 'Bebas Neue', sans-serif; /* google fonts */
-    margin: 0px; /* margin removed */
-    padding: 0px; /* padding removed */
-    text-align: center;
-}
-
-section {
-    padding: 20px; /* spacing added */
-    margin: 20px auto; /* spacing added */
-    max-width: 800px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#Connect {
-    text-align: center; /* section align */
-}
-
-h1, h2 {
-    color: #400153f1; /* color changed for headings */
-    font-weight: bold; /* weight changed for headings */
-}
-
-h1 {
-    font-size: 2.5em; /* size changed for headings */
-    margin-top: 20px;
-    color: #611fa8; /* Transform the style of your Name at the top of the page */
-    text-transform: uppercase;
-}
-
-h2 {
-    font-size: 2em; /* size changed for headings */
-    margin: 20px;
-}
-
-.profile-photo {
-    width: 150px;
-    height: 180px;
-    margin-top: 100px;/* adjusted margin from 20px*/
-    margin-right: 780px;
-    border: 2px solid #2cbdedf1;
-} /* picture added */
-
-#Experience ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#Experience li {
-    display: flex;               /*flex added */
-    flex-direction:row;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 10px;
-
-}
-.experience-item{
-    display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    width: 100%;
-}
-.job, .time {
-    flex: 1;
-    padding: 10px;
-    box-sizing: border-box;
-}
-.job{
-    text-align: right;
-}
-.time{
-    text-align: left;
-}
-
-#Experience li span{
-margin-left: auto; /*added margins*/
-}
-#Experience li:hover {
-    background-color: #e0e0e0;
-}
-#Experience li div{  /*div added to make it nicer*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Transform the style of the "Connect" links */
-#Connect ul{
-    display: flex;
-    justify-content: center;
-    gap: 1headepx;
-    padding: 0;
-    margin: 0;
-}
-#Connect a {
-    color: #007bff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-}
-
-#Connect a:hover {
-    text-decoration: underline;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.github, .email, .facebook {
-    max-width: 40%;
-}
-
-footer {
-    padding: 10px;
-    background-color: #400153f1;
-    color: #fff;
-    margin-top: 20px;
-    text-align: center;
+  background-color: #189dfc3e; /* background color changed */
+  color: #450b78; /* default font color changed */
+  font-family: "Bebas Neue", sans-serif; /* google fonts */
+  text-align: center;
 }
 /* header fixed position */
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    max-width: 800px; /* Align with sections */
-    background-color: white;
-    border-radius: 8px;
-    margin: 0 auto; /* Center align */
+  margin-top: 5px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 5px 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures the header stays on top of other elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*fixing navigation bar*/
+.navigation-bar ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.navigation-bar li {
+  margin: 0 10px;
+}
+.navigation-bar li:hover {
+  background-color: #e0e0e0;
+}
+
+section {
+  padding: 20px; /* spacing added */
+  margin: 20px auto 10px; /* spacing added */
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  color: #400153f1; /* color changed for headings */
+  font-weight: bold; /* weight changed for headings */
+}
+
+h1 {
+  font-size: 2.5em; /* size changed for headings */
+  margin: 5px 0; /*take a look*/
+  color: #611fa8; /* Transform the style of your Name at the top of the page */
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2em; /* size changed for headings */
+  margin: 20px 0;
+}
+section.photo-of-me {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 120px;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 180px;
+  margin-right: 20px;
+  border: 2px solid #2cbdedf1;
+} /* picture added */
+
+#Experience ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /*apperently it highlights columns*/
+  gap: 10px;
+}
+
+#Experience li {
+  display: flex; /*flex added */
+  flex-direction: row;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.experience-item {
+  display: flex;
+  /*flex-direction: row;
+  flex-wrap: wrap;*/
+  justify-content: space-between;
+  width: 100%;
+}
+/*.job,
+.time {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.job {
+  text-align: right;
+}
+.time {
+  text-align: left;
+}
+
+#Experience li span {
+  margin-left: auto; }*/
+
+/* #Experience li div {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+#Experience li:hover {
+  background-color: #e0e0e0;
+}
+
+/* skills added */
+#Skills ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#Skills li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+/* Transform the style of the "Connect" links */
+#Connect {
+  text-align: center; /* section align */
+}
+
+#Connect ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+#Connect a {
+  color: #007bff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+#Connect a:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  max-width: 40px;
+}
+
+footer {
+  padding: 10px;
+  background-color: #400153f1;
+  color: #fff;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Mobile Phone  */
+@media (max-width: 480px) {
+  /* Header Styles */
+  header {
+    padding: 5px 5px;
+  }
+
+  /* Section Styles */
+  section {
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Ensures the header stays on top of other elements */
-    
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-    }
-    /*fixing navigation bar*/
-    .navigation-bar ul{
-        display: flex;
-        list-style-type: none;
-        padding: 0;
-        margin: 0; }
-        .navigation-bar li{
-            margin: 0 10px;
-        }
-       
+    margin: 10px auto 5px;
+  }
+
+  /* Profile Photo Styles */
+  .profile-photo {
+    width: 100px;
+    height: 120px;
+  }
+
+  /* Experience Section Styles */
+  #Experience ul {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  .job,
+  .time {
+    grid-column: 1; /* Place both job and time in the same column */
+    text-align: left; /* Align text to the left */
+  }
+}
