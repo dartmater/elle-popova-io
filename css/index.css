@@ -1,49 +1,4 @@
-/* Smartphones (portrait and landscape) */
-@media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 1.5em; /* h1 font size change for Smartphones */
-    color: #25373d; /* h1 text color change for Smartphones */
-    font-style: italic; /*change font style of my name element */
-  }
-  header {
-    margin-top: 3px; /* header margin change for Smartphones*/
-    padding: 3px 6px; /* header padding change for Smartphones*/
-    background-color: #cbe655; /* header background color change for Smartphones*/
-  }
-
-  #Experience li {
-    background-color: #dac5ef; /* background color change for Smartphones*/
-    display: grid; /* flexbox display change for Smartphones*/
-    grid-template-columns: 1fr 1fr; /*apperently it highlights columns*/
-    gap: 10px;
-    padding: 5px; /* padding change for Smartphones*/
-    margin-bottom: 4px; /* margin change for Smartphones*/
-  }
-}
-
-/* Tablets (portrait and landscape) */
-@media only screen and (min-width: 600px) and (max-width: 800px) {
-  h1 {
-    font-size: 1.5em; /* h1 font size change for Tablets */
-    color: #714570; /* h1 text color change for Tablets */
-    font-style: oblique; /*change font style of my name element */
-  }
-  header {
-    margin-top: 4px; /* header margin change for Tablets*/
-    padding: 4px 8px; /* header padding change for Tablets*/
-    background-color: #f18f87; /* header background color change for Tablets*/
-  }
-
-  #Experience li {
-    background-color: #c5efc9; /* background color change for Tablets*/
-    display: grid; /* flexbox display change for Tablets*/
-    grid-template-columns: 1fr 1fr; /*apperently it highlights columns*/
-    gap: 12px;
-    padding: 6px; /* padding change for Tablets*/
-    margin-bottom: 5px; /* margin change for Tablets*/
-  }
-}
-
+/* Mobile-First Approach */
 * {
   margin: 0; /*from youtube*/
   padding: 0;
@@ -51,16 +6,22 @@
 }
 
 body {
-  background-color: #189dfc3e; /* background color changed */
+  background-color: rgba(195, 235, 254, 0.9); /* background color changed opacity added*/
+  background-blend-mode: screen;
+  background-attachment: fixed;
   color: #450b78; /* default font color changed */
   font-family: "Bebas Neue", sans-serif; /* google fonts */
   text-align: center;
+  
+  background-image: url("../images/industry.jpg"); /*
+   background image added */
 }
 /* header fixed position */
 header {
   margin-top: 5px;
   position: fixed;
   top: 0;
+  margin:auto;
   width: 100%;
   background-color: white;
   border-radius: 8px;
@@ -125,15 +86,16 @@ section.photo-of-me {
   border: 2px solid #2cbdedf1;
 } /* picture added */
 
-#Experience ul {
+#Experience ul, #Skills ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+#Experience ul{
   display: grid;
-  grid-template-columns: 1fr 1fr; /*apperently it highlights columns*/
+  grid-template-columns: 1fr;/*default to single column*/
   gap: 10px;
 }
-
 #Experience li {
   display: flex; /*flex added */
   flex-direction: row;
@@ -150,38 +112,12 @@ section.photo-of-me {
   justify-content: space-between;
   width: 100%;
 }
-/*.job,
-.time {
-  flex: 1;
-  padding: 10px;
-  box-sizing: border-box;
-}
-.job {
-  text-align: right;
-}
-.time {
-  text-align: left;
-}
 
-#Experience li span {
-  margin-left: auto; }*/
-
-/* #Experience li div {
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
 #Experience li:hover {
   background-color: #e0e0e0;
 }
 
 /* skills added */
-#Skills ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
 
 #Skills li {
   display: flex;
@@ -235,33 +171,78 @@ footer {
   width: 100%;
 }
 
-/* Mobile Phone  */
-@media (max-width: 480px) {
-  /* Header Styles */
+
+/* Smartphones (portrait and landscape) */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.5em; /* h1 font size change for Smartphones */
+    color: #25373d; /* h1 text color change for Smartphones */
+    font-style: italic; /*change font style of my name element */
+  }
   header {
-    padding: 5px 5px;
+    margin-top: 3px; /* header margin change for Smartphones*/
+    padding: 3px 6px; /* header padding change for Smartphones*/
+    background-color: #dac5ef; /* header background color change for Smartphones*/
   }
 
-  /* Section Styles */
-  section {
-    padding: 10px;
-    margin: 10px auto 5px;
+  #Experience li {
+    background-color: #dac5ef; /* background color change for Smartphones*/
+    grid-template-columns: 1fr 1fr; /*apperently it highlights columns*/
+    gap: 10px;
+    padding: 5px; /* padding change for Smartphones*/
+    margin-bottom: 4px; /* margin change for Smartphones*/
+  }
+}
+
+/* Tablets (portrait) */
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  h1 {
+    font-size: 1.5em; /* h1 font size change for Tablets */
+    color: #714570; /* h1 text color change for Tablets */
+    font-style: oblique; /*change font style of my name element */
+  }
+  header {
+    margin-top: 4px; /* header margin change for Tablets*/
+    padding: 4px 8px; /* header padding change for Tablets*/
+    background-color: #c0e4ed; /* header background color change for Tablets*/
   }
 
-  /* Profile Photo Styles */
-  .profile-photo {
-    width: 100px;
-    height: 120px;
+  #Experience li {
+    background-color: #c0e4ed; /* background color change for Tablets*/
+    grid-template-columns: 1fr 1fr; /*apperently it highlights columns*/
+    gap: 0px;
+    padding: 6px; /* padding change for Tablets*/
+    margin-bottom: 5px; /* margin change for Tablets*/
   }
+}
+/* Tablets landscape */
+@media only screen and (min-width: 801px) and (max-width: 1200px){
 
-  /* Experience Section Styles */
-  #Experience ul {
-    grid-template-columns: 1fr; /* Single column for mobile */
-  }
+  h1{
+    font-size: 2em; /*larger font for laandscape*/
+      }
+      header {
+        padding: 10px 20px; /*bigger padding*/
+              }
+  #Experience li{
+    grid-template-columns: 1fr 1fr 1fr; /*3 columns layout*/
+    gap: 15 em;
+  } 
+  
+}
+/* Desktops */
 
-  .job,
-  .time {
-    grid-column: 1; /* Place both job and time in the same column */
-    text-align: left; /* Align text to the left */
+@media screen and (min-width: 1201){
+  h1{
+    font-size: 2.5em; /*default*/
   }
+  header {
+    padding: 15px 30px; /*increased padding */
+  }
+  #Experience li{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*4 columns layout*/
+    gap:20px;
+  }
+  
 }
