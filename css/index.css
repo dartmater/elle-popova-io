@@ -17,7 +17,6 @@ body {
 
 /* Header Styles */
 header {
-  margin-top: 5px;
   position: fixed;
   top: 0;
   margin: auto;
@@ -99,7 +98,7 @@ section.photo-of-me {
 }
 #Experience ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns layout */
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columns layout */
   gap: 20px;
 }
 #Experience li {
@@ -180,8 +179,10 @@ footer {
   header {
     padding: 10px 20px; /* bigger padding */
   }
-  #Experience li {
+  #Experience ul {
     grid-template-columns: 1fr 1fr 1fr; /* 3 columns layout */
+  }
+  #Experience li{
     gap: 15em;
   }
 }
@@ -198,9 +199,13 @@ footer {
     padding: 4px 8px; /* header padding change for Tablets */
     background-color: #c0e4ed; /* header background color change for Tablets */
   }
+  
+  #Experience ul{
+    grid-template-columns: 1fr; /* apparently it highlights columns */
+  }
   #Experience li {
     background-color: #c0e4ed; /* background color change for Tablets */
-    grid-template-columns: 1fr 1fr; /* apparently it highlights columns */
+    
     gap: 0px;
     padding: 6px; /* padding change for Tablets */
     margin-bottom: 5px; /* margin change for Tablets */
@@ -219,9 +224,11 @@ footer {
     padding: 3px 6px; /* header padding change for Smartphones */
     background-color: #dac5ef; /* header background color change for Smartphones */
   }
+  #Experience ul{
+    grid-template-columns: 1fr; /* 1 column style */
+  }
   #Experience li {
     background-color: #dac5ef; /* background color change for Smartphones */
-    grid-template-columns: 1fr 1fr; /* apparently it highlights columns */
     gap: 10px;
     padding: 5px; /* padding change for Smartphones */
     margin-bottom: 4px; /* margin change for Smartphones */
