@@ -18,12 +18,8 @@ body {
   font-family: "Bebas Neue", sans-serif; /* google fonts */
   text-align: center;
   background-image: url("../images/industry.jpg"); /* background image added */
-  min-height: 100vh;
 }
-.frame {
-  min-height: calc(100vh-89px);
-  align-content: center;
-}
+
 /* Header Styles */
 header {
   position: fixed;
@@ -56,9 +52,9 @@ header {
 
 /* Section Styles */
 section {
-  padding: 1.5em; /* spacing added */
-  margin: 3% 10% 5% 10%; /* spacing added */
-  max-width: 80%;
+  padding: 20px; /* spacing added */
+  margin: 20px auto 10px; /* spacing added */
+  max-width: 800px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -92,8 +88,8 @@ section.photo-of-me {
 }
 
 .profile-photo {
-  width: 30%;
-  height: auto;
+  width: 150px;
+  height: 180px;
   margin-right: 20px;
   border: 2px solid #2cbdedf1;
 } /* picture added */
@@ -167,7 +163,7 @@ section.photo-of-me {
 }
 
 .icon {
-  max-width: 20%;
+  max-width: 40px;
 }
 
 /* Footer Styles */
@@ -242,15 +238,6 @@ footer {
     padding: 5px; /* padding change for Smartphones */
     margin-bottom: 4px; /* margin change for Smartphones */
   }
-  .icon {
-    max-width: 60%;
-  }
-  .profile-photo {
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-  }
 }
 
 /*Large Screen*/
@@ -258,11 +245,10 @@ footer {
   h1 {
     font-size: 5em; /* larger font for landscape */
   }
-  #Experience ul {
+   #Experience ul {
     grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns layout */
   }
   #Experience li {
     gap: 20em;
-    min-height: 120vh;
   }
 }
