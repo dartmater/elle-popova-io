@@ -18,7 +18,7 @@ copyright.innerHTML = `copyright Elle Popova ${thisYear}`;
 footerElement.appendChild(copyright); // appended copyright element to footer
 
 // Add skills section
-const skills = ["HTML-5", "CSS", "Javascript"]; // list of skills
+const skills = ["HTML-5", "CSS", "Javascript"];
 
 const skillsSection = document.getElementById("Skills"); // select the section by id
 
@@ -46,11 +46,10 @@ messageForm.addEventListener("submit", function (event) {
 
   const newMessage = document.createElement("li");
 
-  newMessage.innerHTML = `<a href = "mailto:${usersEmail}">${usersName}</a>
-<span>wrote:${usersMessage}</span>`;
+  newMessage.innerHTML = `<a href="mailto:${usersEmail}">${usersName}</a>
+<span>wrote: ${usersMessage}</span>`;
 
-  //Remove button creation
-
+  // Remove button creation
   const removeButton = document.createElement("button");
 
   removeButton.innerText = "remove";
@@ -59,7 +58,7 @@ messageForm.addEventListener("submit", function (event) {
   removeButton.addEventListener("click", function () {
     const entry = removeButton.parentNode;
 
-    entry.remove(); //remove the li from dom
+    entry.remove(); // remove the li from dom
     if (messageList.childElementCount === 0) {
       messageSection.style.display = "none";
     }
@@ -71,3 +70,27 @@ messageForm.addEventListener("submit", function (event) {
   messageSection.style.display = "block"; // show the messages section
   event.target.reset();
 });
+
+// Creating the fetch
+const userNameGithub = "dartmater";
+
+const url = `https://api.github.com/users/${userNameGithub}/repos`;
+
+fetch(url)
+  .then((response) => response.json()) // response into json format
+  .then((repositories) => {
+    console.log(repositories);
+
+    const projectSection = document.getElementById("Projects");
+
+    const projectList = projectSection.querySelector("ul");
+
+    for (let i = 0; i < repositories.length; i++) {
+      let project = document.createElement("li");
+      project.innerHTML = repositories[i].name; // Access the repository name
+      projectList.appendChild(project);
+    }
+  })
+  .catch((error) => {
+    console.error("An error occurred:", error);
+  });
