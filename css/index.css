@@ -184,7 +184,7 @@ footer {
 section.form-container {
   padding: 1.5em;
   margin: 3% 10% 5% 10%;
-  max-width: 80%;
+  max-width: 80%; 
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -199,7 +199,7 @@ section.form-container {
   border-radius: 8px;
   padding: 5% 5%;
   margin-bottom: 10px;
-}
+  }
 #leave_message input,
 #leave_message textarea {
   width: 100%;
@@ -215,6 +215,10 @@ section.form-container {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+
+
+
 }
 #leave_message button:hover {
   background-color: #007bff;
