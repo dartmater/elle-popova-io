@@ -100,7 +100,8 @@ section.photo-of-me {
 
 /* Experience and Skills List Styles */
 #Experience ul,
-#Skills ul {
+#Skills ul,
+#Projects ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -143,6 +144,20 @@ section.photo-of-me {
   margin-bottom: 10px;
 }
 
+#Projects li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
 /* Connect Section Styles */
 #Connect {
   text-align: center; /* section align */
@@ -151,7 +166,7 @@ section.photo-of-me {
   list-style-type: none;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
   padding: 0;
   margin: 0;
 }
@@ -167,7 +182,7 @@ section.photo-of-me {
 }
 
 .icon {
-  max-width: 20%;
+  max-width: 15%;
 }
 
 /* Footer Styles */
@@ -184,7 +199,7 @@ footer {
 section.form-container {
   padding: 1.5em;
   margin: 3% 10% 5% 10%;
-  max-width: 80%; 
+  max-width: 50%;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -199,7 +214,7 @@ section.form-container {
   border-radius: 8px;
   padding: 5% 5%;
   margin-bottom: 10px;
-  }
+}
 #leave_message input,
 #leave_message textarea {
   width: 100%;
@@ -209,16 +224,13 @@ section.form-container {
   margin-top: 5px;
 }
 #leave_message button {
-  padding: 5% 10%;
+  padding: 0.75rem;
+  font-size: 15px;
   background-color: #61067a;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-
-
-
-
 }
 #leave_message button:hover {
   background-color: #007bff;
@@ -226,7 +238,7 @@ section.form-container {
 
 /* Messages Section Styles */
 #messages {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   background-color: #f0f0f0;
@@ -234,6 +246,21 @@ section.form-container {
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 10px;
+}
+/* Style for the remove button */
+.remove-button {
+  padding: 5px 8px; /* Smaller padding */
+  background-color: #61067a; /* Match submit button color */
+  color: #fff; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  font-size: 0.9em; /* Smaller font size */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.remove-button:hover {
+  background-color: #007bff; /* Change color on hover */
 }
 
 /* Tablets landscape */
